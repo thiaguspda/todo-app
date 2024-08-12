@@ -152,7 +152,3 @@ Para mais informações, entre em contato através de:
 
 - GitHub: [thiaguspda](https://github.com/thiaguspda)
 - Email: thiago@exemplo.com
-
----
-
-Este README fornece todas as instruções necessárias para que qualquer pessoa clone, instale e execute sua aplicação `todo_app` localmente. Se houver algo mais que precise ser incluído ou ajustado, sinta-se à vontade para editar conforme necessário.
