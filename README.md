@@ -6,7 +6,7 @@
 
 A simple Todo list application built with Ruby on Rails for the backend and React.js for the frontend.
 
-## **Getting Started**
+## Getting Started
 
 ### **Prerequisites**
 
