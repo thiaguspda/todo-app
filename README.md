@@ -1,154 +1,92 @@
-# README
 
-# todo_app
+### **README.md para `todo_app`**
 
-## Descrição
+```markdown
+# Todo App
 
-`todo_app` é uma aplicação de lista de tarefas simples construída com Ruby on Rails para o backend e React para o frontend. A aplicação permite que os usuários adicionem, visualizem, editem, e excluam tarefas. 
+A simple Todo list application built with Ruby on Rails for the backend and React.js for the frontend.
 
-## Funcionalidades
+## **Getting Started**
 
-- Adicionar novas tarefas
-- Listar todas as tarefas
-- Marcar tarefas como concluídas
-- Excluir tarefas
-- Filtrar tarefas por palavras-chave
+### **Prerequisites**
 
-## Pré-requisitos
+- Node.js and npm (Node Package Manager)
+- Ruby and Rails
+- Docker (if using Docker for deployment)
 
-Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
-
-- **Ruby**: Versão 2.7.6
-- **Rails**: Versão 6.x ou superior
-- **Node.js**: Versão 14.x ou superior
-- **Yarn**: Versão 1.x ou superior
-- **Git**: Para clonar o repositório
-- **Docker**: (Opcional) Para rodar a aplicação dentro de containers
-
-## Instruções de Instalação
-
-### 1. Clonar o Repositório
+### **1. Clone the repository**
 
 ```bash
 git clone https://github.com/thiaguspda/todo_app.git
 cd todo_app
 ```
 
-### 2. Configurar o Backend (Ruby on Rails)
+### **2. Set up the backend**
 
-#### 2.1. Instalar Dependências
-
-Se você estiver usando Docker, pule para a seção **2.3**.
-
-Instale as dependências do Ruby on Rails:
-
-```bash
-bundle install
-```
-
-#### 2.2. Configurar o Banco de Dados
-
-1. **Copiar o exemplo de arquivo de configuração**:
+1. **Install dependencies**:
 
    ```bash
-   cp config/database.yml.example config/database.yml
+   bundle install
    ```
 
-2. **Configurar as credenciais do banco de dados** no arquivo `config/database.yml`.
-
-3. **Criar e migrar o banco de dados**:
+2. **Set up the database**:
 
    ```bash
    rails db:create
    rails db:migrate
    ```
 
-#### 2.3. Usar Docker (Opcional)
-
-Se preferir rodar o backend usando Docker:
-
-1. **Construir e iniciar os containers**:
+3. **Start the Rails server**:
 
    ```bash
-   docker-compose up --build
+   rails server
    ```
 
-2. **Executar migrações dentro do container Docker**:
+   The backend will be running on `http://localhost:3000`.
+
+### **3. Set up the frontend**
+
+1. **Navigate to the frontend directory**:
 
    ```bash
-   docker-compose exec web rails db:create db:migrate
+   cd frontend
    ```
 
-### 3. Configurar o Frontend (React)
+2. **Install dependencies**:
 
-#### 3.1. Instalar Dependências
+   ```bash
+   npm install
+   ```
 
-No diretório `frontend`, instale as dependências do Node.js:
+3. **Start the React development server**:
 
-```bash
-cd frontend
-yarn install
+   ```bash
+   npm start
+   ```
+
+   The frontend will be running on `http://localhost:3001`.
+
+### **4. Open the application**
+
+- Visit `http://localhost:3001` to view the application.
+- The frontend will interact with the Rails API running on `http://localhost:3000`.
+
+## **Deployment**
+
+If deploying to AWS Elastic Beanstalk or another cloud platform, ensure that the appropriate environment variables are set, and follow the deployment instructions specific to the platform.
+
+## **Built With**
+
+- Ruby on Rails - Backend API
+- React.js - Frontend UI
+- Docker - Containerization (optional)
+- AWS Elastic Beanstalk - Deployment (optional)
+
+## **Contributing**
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## **License**
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 ```
-
-### 4. Rodar a Aplicação
-
-#### 4.1. Rodar o Backend (Rails)
-
-Se você não estiver usando Docker:
-
-```bash
-rails server
-```
-
-O servidor estará disponível em `http://localhost:3000`.
-
-Se você estiver usando Docker, o backend já estará rodando na porta `3000`.
-
-#### 4.2. Rodar o Frontend (React)
-
-Em uma nova aba do terminal, navegue até o diretório `frontend` e rode:
-
-```bash
-yarn start
-```
-
-O servidor de frontend estará disponível em `http://localhost:3001`.
-
-### 5. Configuração Adicional
-
-#### 5.1. Configurar Variáveis de Ambiente
-
-Certifique-se de configurar as variáveis de ambiente necessárias para o Rails, como `DATABASE_URL`, `SECRET_KEY_BASE`, etc., no arquivo `.env` ou através do sistema de gerenciamento de ambiente de sua escolha.
-
-### 6. Testes
-
-Para rodar os testes, utilize o seguinte comando no diretório raiz do projeto:
-
-```bash
-rails test
-```
-
-### 7. Deploy
-
-Para fazer deploy em produção, recomendamos o uso de serviços como AWS Elastic Beanstalk, Heroku, ou qualquer outro serviço que suporte Rails e React.
-
-### 8. Contribuição
-
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
-
-1. Faça um fork do projeto.
-2. Crie uma nova branch (`git checkout -b feature/nova-funcionalidade`).
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`).
-4. Envie para a branch (`git push origin feature/nova-funcionalidade`).
-5. Abra um Pull Request.
-
-### 9. Licença
-
-Este projeto está licenciado sob os termos da [MIT License](LICENSE).
-
-### 10. Contato
-
-Para mais informações, entre em contato através de:
-
-- GitHub: [thiaguspda](https://github.com/thiaguspda)
-- Email: thiago@exemplo.com
